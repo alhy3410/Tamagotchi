@@ -1,9 +1,10 @@
 class Tamagotchi
-  define_method(:initialize) do |name, food, activity, rest|
+  define_method(:initialize) do |name, food, rest, activity|
     @name = name
     @food = food
-    @activity = activity
     @rest = rest
+    @activity = activity
+
   end
 
   define_method(:name) do
@@ -14,18 +15,16 @@ class Tamagotchi
     @food
   end
 
-  define_method(:activity_level) do
-    @activity
-  end
-
   define_method(:rest_level) do
     @rest
   end
 
+  define_method(:activity_level) do
+    @activity
+  end
+
   define_method(:is_alive) do
-    binding.pry
     if @food == 0 || @rest == 0 || @activity == 10
-    binding.pry
       "Tamagotchi Passed Away"
     else
       "Tamagotchi is still alive"
