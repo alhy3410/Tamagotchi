@@ -37,14 +37,18 @@ class Tamagotchi
 
   define_method(:feed) do
     @food += 1
+    @rest += 1
+    @food
   end
 
   define_method(:put_to_bed) do
-    @rest += 1
+    @rest += 3
   end
 
   define_method(:play_with) do
     @activity += 1
+    @rest -= 2
+    @activity
   end
 
 

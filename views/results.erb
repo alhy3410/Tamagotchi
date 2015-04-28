@@ -1,0 +1,37 @@
+<h1>Here is the current status for your Tamagotchi pet.</h1>
+
+<h2>Name: <%=@name%></h2>
+
+<h2>Here are the stats!</h2>
+
+<h3>Food: <%=@food%></h3>
+<h3>Rest: <%=@rest%></h3>
+<h3>Activity: <%=@activity%></h3>
+
+<form action = "/results">
+  <div class = "form-group">
+    <label id="feed">Feed Your Tamagotchi</label>
+    <input id="feed" name="feed" class="form-control" type="text">
+  </div>
+
+  <button type="submit" class="btn-success">Feed Your Tamagotchi</button>
+</form>
+
+<form action = "/results">
+  <div class = "form-group">
+    <label id="rest">Feed Your Tamagotchi</label>
+    <input id="rest" name="rest" class="form-control" type="text">
+  </div>
+
+  <button type="submit" class="btn-success">Put Your Tamagotchi To Bed</button>
+
+</form>
+
+<form action = "/results">
+  <div class = "form-group">
+    <label id="activity">Feed Your Tamagotchi</label>
+    <input id="activity" name="activity" class="form-control" type="text">
+  </div>
+
+  <button type="submit" class="btn-success">Play With Your Tamagotchi</button>
+</form>
