@@ -24,10 +24,28 @@ class Tamagotchi
   end
 
   define_method(:is_alive) do
-    if @food == 0 || @rest == 0 || @activity == 10
-      "Tamagotchi Passed Away"
+    if @food > 9
+      "Your Tamagotchi popped. You over fed him"
+    elsif @activity > 9 || @rest == 0
+      "Your Tamagotchi died of exhaustion"
+    elsif @food == 0
+        "Your Tamagotchi Starved"
     else
       "Tamagotchi is still alive"
     end
   end
+
+  define_method(:feed) do
+    @food += 1
+  end
+
+  define_method(:put_to_bed) do
+    @rest += 1
+  end
+
+  define_method(:play_with) do
+    @activity += 1
+  end
+
+
 end
