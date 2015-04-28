@@ -6,3 +6,7 @@ require('./lib/Tamagotchi')
 get('/') do
   erb(:index)
 end
+
+get('/results') do
+  erb(:results)
+end
